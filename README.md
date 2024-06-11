@@ -8,9 +8,9 @@ Visit https://developer.hashicorp.com/terraform/install to choose appropriate th
 Visit https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html to install AWS CLI for your platform. Version 2.16.4
 ## Overview of scripts and terraform config
 ### server_provision.tf
-This is Terraform file that defines a us-west-2 EC2 instance with Linux 2 AMI (x86) as the OS image. It creates a security group that allows ssh and Minecraft conncetions for the server. Remotely provisions the AMI with 'remote_script.sh' using remote_exec.
+This is Terraform file that defines a us-west-2 EC2 instance with Linux 2 AMI (x86) as the OS image. It creates a security group that allows ssh and Minecraft connections for the server. It remotely provisions the AMI with 'remote_script.sh' using remote_exec.
 ### setup_script.sh
-  This is a shell script to run on the local machine that create a key pair for the AMI names myKeyfile and stores them in a new directory called keyfiles. The script then runs terraform init and terraform apply to initialize and create the instance.
+  This is a shell script to run on the local machine that creates a key pair for the AMI named myKeyfile and stores it in a new directory called keyfiles. The script then runs terraform init and terraform apply to initialize and create the instance.
 ### remote_script.sh
   This is a shell script to run on the AMI that installs java 21, installs the latest Minecraft Server pkg (v1.20.6), signs the EULA, then creates a systemd service to start the Minecraft server if/when resources restart.
 
@@ -30,6 +30,8 @@ This is Terraform file that defines a us-west-2 EC2 instance with Linux 2 AMI (x
   - Open your Minecraft client and make sure you are using version 1.20.6 (the same version as the server).
   - Go to 'Multiplayer'
   - Click 'Direct Connection' and paste the public IP notes from the previous step.
+  - Hit 'Connect'
+
 ## Resources
 ### Terraform configuration
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build
