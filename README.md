@@ -1,4 +1,4 @@
-# MinecraftServer
+# Minecraft Server
 Scripts for provisioning, setting up, and starting a Minecraft server using AWS CLI and Terraform. 
 
 ## Requirements
