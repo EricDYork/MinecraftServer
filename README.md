@@ -38,7 +38,10 @@ This is Terraform file that defines a us-west-2 EC2 instance with Linux 2 AMI (x
 - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule
 - https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec
 ### AWS
+- https://docs.aws.amazon.com/cli/v1/userguide/cli-authentication-short-term.html
 - https://aws.amazon.com/blogs/gametech/setting-up-a-minecraft-java-server-on-amazon-ec2/
 ### Systemd service creation
 - https://www.suse.com/support/kb/doc/?id=000019672
+### Minecraft server download
+- https://www.minecraft.net/en-us/download/server
 
