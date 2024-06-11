@@ -18,9 +18,7 @@ java -Xmx1300M -Xms1300M -jar server.jar nogui
 # accept licensing
 sed -i "s/^eula=false/eula=true/" eula.txt
 
-# recompile to start server
-#java -Xmx1300M -Xms1300M -jar server.jar nogui
-
+# create script for systemd service
 touch server_start.sh
 printf '#!'"/bin/bash\njava -Xmx1300M -Xms1300M -jar server.jar nogui\n" > server_start.sh
 chmod +x server_start.sh
